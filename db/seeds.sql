@@ -1,30 +1,27 @@
-USE emptrack_db;
+USE employeeDB;
 
-INSERT INTO department (dept_name)
-VALUES
-    ('Sales'),
-    ('Software'),
-    ('Finance'),
-    ('Legal');
+-- DEPARTMENT
+INSERT INTO department (names)
+VALUES ("Sales");
+INSERT INTO department (names)
+VALUES ("Engineering");
+INSERT INTO department (names)
+VALUES ("Finance");
+INSERT INTO department (names)
+VALUES ("Legal");
 
-INSERT INTO role (title, salary, dept_id)
-VALUES
-    ('Sales Mgr', 100000, 1),
-    ('Sales Rep', 80000, 1),
-    ('Legal Project Manager', 250000, 4),
-    ('Lawyer', 190000, 4),
-    ('Junior Software Dev', 120000, 2),
-    ('Senior Software Dev', 150000, 2),
-    ('Account Manager', 160000, 3),
-    ('Payroll', 125000, 3);
+-- ROLES
+INSERT INTO roles (title, salary, department_id)
+VALUES ("Sales Lead", 100, 1);
+INSERT INTO roles (title, salary, department_id)
+VALUES ("Lead Engineer", 250, 2);
+INSERT INTO roles (title, salary, department_id)
+VALUES ("Software Engineer", 200, 2);
+INSERT INTO roles (title, salary, department_id)
+VALUES ("Accountant", 300, 3);
+INSERT INTO roles (title, salary, department_id)
+VALUES ("Legal Team Lead", 400, 4);
 
-INSERT INTO employee (first_name, last_name, role_id, mgr_id)
-VALUES
-    ('Sah', 'Lud', 7, NULL),
-    ('Brack', 'Oma', 1, NULL),
-    ('Kevin', 'Chilli', 4, 3),
-    ('James', 'Ruez', 3, NULL),
-    ('Jackie', 'Chan', 2, 1),
-    ('Mai', 'Won', 6, 5),
-    ('Tom', 'Alein', 8, 7),
-    ('Kal', 'Sig', 5, NULL);
+-- 
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("Adrian", "Banda", 1, 3);
