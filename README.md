@@ -8,7 +8,7 @@
 
 ## Link to Video Walkthrough
 
-https://youtu.be/6SiO8HQaijo
+
 
 ## Table of Contents
 
