@@ -26,10 +26,9 @@ connection.connect(function (err) {
    |                                                   | 
    |                                                   | 
     ---------------------------------------------------
-  `)
+`)
 
     viewTable();
-    // starterQuestions();
 });
 
 function starterQuestions() {
@@ -72,13 +71,6 @@ function starterQuestions() {
                 case "View all Departments":
                     viewAllDepartments();
                     break;
-                // case "View all employees by department":
-                //   viewAllEmployeesByDepartment();
-                //   break;
-                // case "View all employees by Manager":
-                //   viewAllEmployeesByManager();
-                //   break;
-
                 case "Exit":
                     connection.end();
                     break;
@@ -170,9 +162,6 @@ function employeeInsert(roleChoices) {
                 },
                 function (err, res) {
                     if (err) throw err;
-
-                    // console.table(res);
-
                     starterQuestions();
                 });
         });
@@ -231,9 +220,6 @@ function promptRoleQuestions(departmentChoices) {
                 },
                 function (err, res) {
                     if (err) throw err;
-
-                    // console.table(res);
-
                     starterQuestions();
                 });
         });
@@ -260,9 +246,6 @@ function addDepartment() {
                 },
                 function (err, res) {
                     if (err) throw err;
-
-                    // console.table(res);
-
                     starterQuestions();
                 });
         });
